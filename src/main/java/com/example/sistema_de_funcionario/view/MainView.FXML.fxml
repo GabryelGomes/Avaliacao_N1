@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.sistema_de_funcionario.controller.MainController"
+            prefWidth="1000" prefHeight="600">
+
+    <!-- Formulário de Cadastro -->
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Cadastro de Funcionário" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TextField fx:id="campoNome" promptText="Nome"/>
+            <TextField fx:id="campoCpf" promptText="CPF"/>
+            <TextField fx:id="campoMatricula" promptText="Matrícula (6 dígitos)"/>
+            <TextField fx:id="campoCargo" promptText="Cargo"/>
+            <TextField fx:id="campoSalario" promptText="Salário"/>
+            <DatePicker fx:id="campoNascimento" promptText="Data de Nascimento"/>
+            <DatePicker fx:id="campoContratacao" promptText="Data de Contratação"/>
+            <Separator/>
+            <Label text="Endereço" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="campoRua" promptText="Rua"/>
+            <TextField fx:id="campoNumero" promptText="Número"/>
+            <TextField fx:id="campoBairro" promptText="Bairro"/>
+            <TextField fx:id="campoCidade" promptText="Cidade"/>
+            <TextField fx:id="campoEstado" promptText="Estado"/>
+            <TextField fx:id="campoCep" promptText="CEP"/>
+            <HBox spacing="10">
+                <Button text="Novo" onAction="#novoFuncionario"/>
+                <Button fx:id="btnSalvar" text="Salvar" onAction="#salvarFuncionario"/>
+                <Button text="Excluir" onAction="#excluirFuncionario"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <!-- Relatórios e Tabela -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Cards de Relatório -->
+            <HBox spacing="10">
+                <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #28a745; -fx-padding: 10; -fx-background-radius: 5;">
+                    <Label text="Média Salarial" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                    <Label fx:id="labelMediaSalario" text="0.0" style="-fx-text-fill: white; -fx-font-size: 18px;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #ffc107; -fx-padding: 10; -fx-background-radius: 5;">
+                    <Label text="Qtd Funcionários" style="-fx-text-fill: black; -fx-font-weight: bold;"/>
+                    <Label fx:id="labelQtdFuncionarios" text="0" style="-fx-font-size: 18px;"/>
+                </VBox>
+            </HBox>
+
+            <!-- Tabela de Funcionários -->
+            <TableView fx:id="tabelaFuncionarios" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colunaId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colunaNome" text="Nome" prefWidth="150"/>
+                    <TableColumn fx:id="colunaMatricula" text="Matrícula" prefWidth="100"/>
+                    <TableColumn fx:id="colunaCargo" text="Cargo" prefWidth="100"/>
+                    <TableColumn fx:id="colunaSalario" text="Salário" prefWidth="100"/>
+                    <TableColumn fx:id="colunaCpf" text="CPF" prefWidth="120"/>
+                    <TableColumn fx:id="colunaNascimento" text="Nascimento" prefWidth="100"/>
+                    <TableColumn fx:id="colunaContratacao" text="Contratação" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>
