@@ -2,7 +2,7 @@
 
 ## Requisitos
 - Java JDK 17+
-- JavaFX (caso necessário, pode ser embutido via SceneBuilder)
+- JavaFX
 - IDE (recomendado: IntelliJ IDEA ou Eclipse)
 
 ## Como Executar
