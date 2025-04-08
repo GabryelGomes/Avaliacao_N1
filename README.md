@@ -7,7 +7,7 @@
 
 ## Como Executar
 1. Clone o repositório:
-   git clone [https://github.com/GabryelGomes/POO3_P1.git](https://github.com/GabryelGomes/Avaliacao_N1)
+   git clone https://github.com/GabryelGomes/Avaliacao_N1
 
 2. Abra o projeto em sua IDE.
 
